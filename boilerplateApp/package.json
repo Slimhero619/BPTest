@@ -1,0 +1,51 @@
+{
+  "name": "boilerplateApp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "proxy": "node ./api-server.js",
+    "startServers": "concurrently --kill-others \"npm run proxy\" \"npm run serve\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@coreui/coreui": "^4.0.5",
+    "@coreui/icons": "^2.1.0",
+    "@coreui/icons-react": "^2.0.0",
+    "@coreui/react": "^4.0.0",
+    "@material-ui/icons": "^4.11.2",
+    "@microsoft/sp-office-ui-fabric-core": "1.12.1",
+    "@pnp/sp": "^2.0.5",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
+    "react-router-dom": "^5.3.0",
+    "styled-components": "^5.3.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/plugin-transform-runtime": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "concurrently": "^6.3.0",
+    "css-loader": "^6.3.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "4.5.2",
+    "mini-css-extract-plugin": "^2.4.2",
+    "node-sass": "^6.0.1",
+    "sass": "^1.42.1",
+    "sass-loader": "^12.1.0",
+    "sp-rest-proxy": "^3.1.1",
+    "style-loader": "^3.3.0",
+    "webpack": "5.57.1",
+    "webpack-cli": "4.9.0",
+    "webpack-dev-server": "3.11.2"
+  },
+  "proxy": "http://127.0.0.1:8081"
+}
